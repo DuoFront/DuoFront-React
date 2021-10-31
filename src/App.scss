@@ -1,0 +1,20 @@
+@use './assets/scss/variables';
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Roboto:wght@100;300;400;500;700&family=Russo+One&family=Zen+Kurenaido&display=swap');
+
+* {
+  margin:0;
+  border: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  list-style: none;
+}
+
+body {
+  background-color: variables.$bg-color ;
+  overflow-x: hidden;
+}
+
+.text--purple {
+  color: variables.$second-color;
+}

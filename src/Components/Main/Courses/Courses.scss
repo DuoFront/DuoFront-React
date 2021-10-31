@@ -1,0 +1,15 @@
+@use '../../../assets/scss/variables';
+.courses {
+  margin: 0 70px 70px;
+
+  &__title {
+    color: variables.$primary-color;
+    padding-bottom: 2rem;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  
+  }
+}
