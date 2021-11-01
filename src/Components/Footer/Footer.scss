@@ -1,5 +1,5 @@
-@use '../../assets/scss/variables';
-@use '../../assets/scss/mixins';
+@use '../../styles/mixins';
+@use '../../styles/variables';
 
 .footer {
   @include mixins.flex-column;

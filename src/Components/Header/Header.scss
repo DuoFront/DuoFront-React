@@ -1,5 +1,5 @@
-@use '../../assets/scss/variables';
-@use '../../assets/scss/mixins';
+@use '../../styles/mixins';
+@use '../../styles/variables';
 
 .header {
   display: flex;
@@ -9,6 +9,14 @@
 
   &__title {
     font-size: 1.3rem;
+    color: variables.$primary-color;
+  }
+
+  &__icon {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
     color: variables.$primary-color;
   }
 
@@ -22,7 +30,7 @@
     top: 0;
     z-index: 1;
     border-bottom-left-radius: 10px;
-    animation: descendo .5s ease-in;
+    animation: descendo 500ms linear;
     @include mixins.animations;
   }
 

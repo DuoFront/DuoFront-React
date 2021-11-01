@@ -1,8 +1,8 @@
 import React from "react"
-import './App.scss'
+import './styles/global.scss'
 
-import { Header } from './Components/Header/Header'
-import { Main } from './Components/Main/Main'
+import { Header } from './components/Header/Header'
+import { Main } from './components/Main/Main'
 
 function App() {
   

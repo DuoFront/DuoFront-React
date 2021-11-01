@@ -122,16 +122,13 @@
 
 @mixin animations {
     @keyframes descendo {
-        0% {
-          -webkit-height:  0;   
-          height: 0;  
+        from {
           width: 0;
           opacity: 0;  
          }
 
-        100% {
-          -webkit-height: 50vh;  
-          height: 50vh; 
+        to {
+          width: 50vh;
           opacity: 1; 
         }
     }
