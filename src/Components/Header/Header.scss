@@ -1,0 +1,59 @@
+@use '../../styles/mixins';
+@use '../../styles/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  height: 90px;
+
+
+  &__title {
+    font-size: 1.3rem;
+    color: variables.$primary-color;
+  }
+
+  &__icon {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    color: variables.$primary-color;
+  }
+
+  &__menu {
+    background-color: variables.$bg-menu-curso;
+    width: 45vh;
+    height: 50vh; 
+    padding: 50px 40px 70px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    border-bottom-left-radius: 10px;
+    animation: descendo 500ms linear;
+    @include mixins.animations;
+  }
+
+  &__link {
+    text-decoration: none;
+    display: block;
+    font-size: 1.2rem;
+    color: variables.$primary-color;
+    padding-bottom: 20px;
+  }
+}
+
+.menu-mobile-outline, .menu-mobile-close {
+  position: absolute;
+  right: 20px;
+  top:0;
+  z-index: 2;
+  @include mixins.icons;
+}
+.avatar{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
