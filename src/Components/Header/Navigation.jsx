@@ -12,7 +12,7 @@ export function Navigation({lista = listaMenu}){
 
   let iconOpen = faBars
   const [showMenu, setShowMenu] = useState(false)
-  const {user, signOut, signIn} = useAuth()
+  const {user, signOut, signUrl} = useAuth()
 
   let menu
 
@@ -34,13 +34,13 @@ export function Navigation({lista = listaMenu}){
     {user &&
     <>
       <li onClick={signOut} className="header__link">Logout</li>
-      <img src={user.avatar_url} alt={user.nome} className="avatar"/>
-      <li>{user.nome}</li>
+      <img src={user.avatar_url} alt={user.name} className="avatar"/>
+      <li>{user.name}</li>
     </>
     }
     {!user &&
     
-      <li onClick={signIn} className="header__link">Entrar</li>
+      <li className="header__link"><a href={signUrl}>Entrar</a></li>
     }
   </ul>)
   }
