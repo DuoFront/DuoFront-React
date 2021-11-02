@@ -1,6 +1,6 @@
 import React from "react"
 import './Hero.scss'
-import logo from "../../../assets/img/logo.png"
+import logo from "../../assets/img/logo.png"
 
 export function Hero(){
 

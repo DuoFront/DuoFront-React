@@ -1,11 +1,12 @@
 import React from "react"
 import './Button.scss'
+import { Link } from "react-router-dom"
 
 export function Button({link,text}){
   return(
-    <a 
-    href={link} 
+    <Link
+    to={link} 
     className="courses__btn" 
-    >{text}</a>
+    >{text}</Link>
   )
 }

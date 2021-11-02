@@ -4,8 +4,10 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: .7rem 0;
-  margin: 0 4rem;
+  align-items: center;
+  padding: 1rem 4rem;
+  height: 90px;
+
 
   &__title {
     font-size: 1.3rem;
@@ -49,4 +51,9 @@
   top:0;
   z-index: 2;
   @include mixins.icons;
+}
+.avatar{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }

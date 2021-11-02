@@ -1,7 +1,7 @@
 import React from "react"
 import './About.scss'
 import '../Card/Card.scss'
-import { Card } from '../Card/Card'
+import { Card } from '../Card'
 
 export function About(){
   return(

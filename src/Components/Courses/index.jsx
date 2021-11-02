@@ -1,11 +1,11 @@
 import React from "react"
-import { Button } from "../Button/Button"
+import { Button } from "../Button"
 import './Courses.scss'
 
 const btns = [
-  {id:1, href:'',text:'HTML'},
-  {id:2, href:'',text:'CSS'},
-  {id:3, href:'',text:'JavaScript'},
+  {id:1, link:'/html',text:'HTML'},
+  {id:2, link:'#',text:'CSS'},
+  {id:3, link:'#',text:'JavaScript'},
 ]
 
 export function Courses(){
@@ -17,7 +17,7 @@ export function Courses(){
         btns.map((item) => (
           <Button 
           key={item.id}
-          href={item.href}
+          link={item.link}
           text={item.text}/>
         ))
       }

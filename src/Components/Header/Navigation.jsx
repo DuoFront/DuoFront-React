@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-
+import { useAuth } from "../../hooks/Auth"
 const listaMenu = [
   {id:1, link: 'https://www.google.com', text: 'Layouts'},
   {id:2, link: 'https://www.google.com', text: 'Teste'},
@@ -12,7 +12,8 @@ export function Navigation({lista = listaMenu}){
 
   let iconOpen = faBars
   const [showMenu, setShowMenu] = useState(false)
-  
+  const {user, signOut, signIn} = useAuth()
+
   let menu
 
   if(showMenu){
@@ -29,6 +30,17 @@ export function Navigation({lista = listaMenu}){
             </a>
         </li>
       ))
+    }
+    {user &&
+    <>
+      <li onClick={signOut} className="header__link">Logout</li>
+      <img src={user.avatar_url} alt={user.nome} className="avatar"/>
+      <li>{user.nome}</li>
+    </>
+    }
+    {!user &&
+    
+      <li onClick={signIn} className="header__link">Entrar</li>
     }
   </ul>)
   }
