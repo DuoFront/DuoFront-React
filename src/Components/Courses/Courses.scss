@@ -5,17 +5,18 @@
   margin: 0 70px 70px;
 
   @include mixins.cell {
-    margin: 0 20px 70px;
+    margin: 70px 20px ;
   }
 
   &__title {
     color: variables.$primary-color;
-    padding-bottom: 2rem;
+    padding: 100px 0 2rem;
   }
 
   &__buttons {
     display: flex;
     justify-content: space-between;
+    
 
     @include mixins.cell {
       flex-direction: column;
