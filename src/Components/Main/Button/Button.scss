@@ -9,11 +9,11 @@
   height: 70px;
   border-radius: 10px;
   font-weight: bold;
-  color: red;
   color: variables.$text-color;
   font-size: 30px;
   background-color: variables.$bg-card;
   position: relative;  
+  cursor: pointer;
 
   &::before{
     content: '';
@@ -27,6 +27,10 @@
     z-index: -1;
     bottom: -13px;
     left: 10px;
-
+    transition: all .7s;
 }
+  &:hover::before {
+    background-color: darken(variables.$second-color, 10%);
+    filter: drop-shadow(1px 1px 2px variables.$second-color);
+  }
 }

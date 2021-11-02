@@ -133,15 +133,13 @@
         }
     }
 
-    @keyframes descendoTexto {
-        0% {
-          opacity: 0; 
-          display: none; 
-         }
-        100% {
-          opacity: 1; 
-          display: block;
-        }
+    @keyframes cards {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     @keyframes winner {
