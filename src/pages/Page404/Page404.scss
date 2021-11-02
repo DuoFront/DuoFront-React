@@ -1,0 +1,23 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.main {
+  @include mixins.flex-column;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0 10px;
+  text-align: center;
+
+  &__text {
+    top:100px;
+    position: absolute;
+    color: variables.$primary-color;
+  }
+
+  &__img {
+    max-width: 700px;
+    width: 100%;
+  }
+
+}
