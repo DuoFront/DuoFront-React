@@ -1,4 +1,5 @@
 @use '../../styles/variables';
+@use '../../styles/mixins';
 
 .courses__btn {
   display: flex;
@@ -14,6 +15,11 @@
   background-color: variables.$bg-card;
   position: relative;  
   cursor: pointer;
+
+  @include mixins.cell {
+    max-width: 100%;
+    height: 80px;
+  }
 
   &::before{
     content: '';

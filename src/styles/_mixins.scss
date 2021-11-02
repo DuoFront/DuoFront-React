@@ -101,6 +101,12 @@
 
 // responsive
 
+@mixin pc-lg() {
+  @media(max-width:1024px){
+      @content;
+  }
+}
+
 @mixin pc() {
     @media(max-width:960px){
         @content;
@@ -132,6 +138,18 @@
           opacity: 1; 
         }
     }
+
+    @keyframes descendo-mobile {
+      from {
+        width: 0;
+        opacity: 0;  
+       }
+
+      to {
+        width: 80vw;
+        opacity: 1; 
+      }
+  }
 
     @keyframes cards {
       from {

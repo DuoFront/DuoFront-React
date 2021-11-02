@@ -1,7 +1,12 @@
 @use '../../styles/variables';
+@use '../../styles/mixins';
 
 .courses {
   margin: 0 70px 70px;
+
+  @include mixins.cell {
+    margin: 0 20px 70px;
+  }
 
   &__title {
     color: variables.$primary-color;
@@ -11,6 +16,11 @@
   &__buttons {
     display: flex;
     justify-content: space-between;
+
+    @include mixins.cell {
+      flex-direction: column;
+      gap: 40px;
+    }
   
   }
 }
