@@ -1,14 +1,14 @@
 import React from "react"
 import styles from './Hero.module.scss'
 import logo from "../../assets/img/gatos/logo.png"
-
+import { TypeWriter } from "../TypeWriter"
 export function Hero(){
 
   return(
       <section className={styles.hero}>
         <article className={styles.hero__card}>
           <h1 className={styles.hero__title}>
-          Aprenda <span className={styles.hero__title__purple}>front-end</span> de forma completa 
+          <TypeWriter value="Aprenda front-end de forma completa" indice={1}/>
           </h1>
         </article>
         <article className={styles.hero__card}>
