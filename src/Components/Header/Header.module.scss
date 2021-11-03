@@ -63,7 +63,11 @@
     padding-bottom: 20px;
     transition: all 1s;
     cursor: pointer;
+    color: white;
 
+    a{
+      color: white;
+    }
     &:hover {
       color: variables.$second-color;
     }

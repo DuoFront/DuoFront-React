@@ -14,7 +14,7 @@ export function Navigation({ lista = listaMenu}) {
 
   let iconOpen = faBars
   const [showMenu, setShowMenu] = useState(false)
-  const { user, signOut } = useAuth()
+  const { user, signOut, signUrl } = useAuth()
 
   let menu
 
@@ -24,9 +24,8 @@ export function Navigation({ lista = listaMenu}) {
     (<ul className={styles.header__menu}>
     {
       lista.map((item) => (
-        <li key={item.id}>
+        <li key={item.id} className={styles.header__link}>
           <Link
-          className={styles.header__link}
           to={item.link}>
             {item.text}
             </Link>
