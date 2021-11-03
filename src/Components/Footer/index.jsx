@@ -1,5 +1,6 @@
 import React from "react"
-import './Footer.scss'
+import './styles.scss'
+
 export function Footer({tipo= 'footer'}){
   return(
     <footer className={tipo}>

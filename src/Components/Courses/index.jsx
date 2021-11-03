@@ -1,6 +1,6 @@
 import React from "react"
 import { Button } from "../Button"
-import './Courses.scss'
+import styles from './Courses.module.scss'
 
 const btns = [
   {id:1, link:'/html',text:'HTML'},
@@ -10,9 +10,9 @@ const btns = [
 
 export function Courses(){
   return(
-    <section className="courses">
-      <h2 className="courses__title">Nossos módulos</h2>
-      <div className="courses__buttons">
+    <section className={styles.courses}>
+      <h2 className={styles.courses__title}>Nossos módulos</h2>
+      <div className={styles.courses__buttons}>
       {
         btns.map((item) => (
           <Button 

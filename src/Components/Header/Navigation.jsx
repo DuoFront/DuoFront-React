@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, {useState} from "react"
+import styles from './Header.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { useAuth } from "../../hooks/Auth"
@@ -19,40 +20,41 @@ export function Navigation({ lista = listaMenu}) {
 
   if (showMenu) {
     iconOpen = faTimes
-    menu =
-      (<ul className="header__menu">
-        {
-          lista.map((item) => (
-            <li key={item.id}  className="header__link">
-              <Link
-               
-                to={item.link}>
-                {item.text}
-              </Link>
-            </li>
-          ))
-        }
-
-        {user &&
-          <>
-            <li onClick={signOut} className="header__link">Logout</li>
-            <img src={user.avatar_url} alt={user.name} className="avatar" />
-            <li>{user.name}</li>
-          </>
-        }
-
-        {!user && <li className="header__link"><Link to="/login">Entrar</Link></li>}
-      </ul>)
+    menu =  
+    (<ul className={styles.header__menu}>
+    {
+      lista.map((item) => (
+        <li key={item.id}>
+          <Link
+          className={styles.header__link}
+          to={item.link}>
+            {item.text}
+            </Link>
+        </li>
+      ))
+    }
+    {user &&
+    <>
+      <li onClick={signOut} className={styles.header__link}>Logout</li>
+      <img src={user.avatar_url} alt={user.name} className={styles.avatar}/>
+      <li>{user.name}</li>
+    </>
+    }
+    {!user &&
+    
+      <li className={styles.header__link}><a href={signUrl}>Entrar</a></li>
+    }
+  </ul>)
   }
 
   return (
     <nav>
-      <FontAwesomeIcon
-        icon={iconOpen}
-        className="header__icon"
-        onClick={() => (setShowMenu(!showMenu))}
-      />
-      {menu}
-    </nav>
+    <FontAwesomeIcon 
+    icon={iconOpen}
+    className={styles.header__icon}
+    onClick={ () => (setShowMenu(!showMenu))}
+    />
+    { menu }
+  </nav>
   )
 }
