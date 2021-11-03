@@ -1,0 +1,12 @@
+@use '../../styles/variables';
+
+.btnDefault {
+  display: flex;
+  align-items: center;
+  background-color: variables.$second-color;
+  padding: 1rem 3rem;
+  color: variables.$primary-color;
+  font-size: 1.4rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
