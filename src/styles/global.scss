@@ -18,3 +18,9 @@ body {
 .text--purple {
   color: variables.$second-color;
 }
+a{
+  text-decoration: none;
+}
+a:visited{
+  color: inherit;
+}
