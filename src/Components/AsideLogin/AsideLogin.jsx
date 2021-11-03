@@ -1,14 +1,14 @@
 import React from "react"
-import './AsideLogin.scss'
+import styles from './AsideLogin.module.scss'
 
 export function AsideLogin() {
   return (
-    <aside className="aside">
-        <h2 className="aside-title">
+    <aside className={styles.aside}>
+        <h2 className={styles.aside__title}>
           Seja um desenvolvedor <strong>Front-end</strong>
         </h2>
 
-        <div className="aside-imagens">
+        <div className={styles.aside__imagens}>
           <div>
             <img src="https://github.com/alexRicc2.png" alt="" />
             <p>Alex</p>
@@ -18,10 +18,10 @@ export function AsideLogin() {
             <p>Paola</p>
           </div>
         </div>
-        <div className="traco1"></div>
-        <div className="traco2"></div>
-        <div className="circulo1"><span>&lt;</span></div>
-        <div className="circulo2"><span>/&gt;</span></div>
+        <div className={styles.traco1}></div>
+        <div className={styles.traco2}></div>
+        <div className={styles.circulo1}><span>&lt;</span></div>
+        <div className={styles.circulo2}><span>/&gt;</span></div>
       </aside>
   )
 }
