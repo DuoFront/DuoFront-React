@@ -9,7 +9,7 @@ const listaMenu = [
   { id: 3, link: '#', text: 'Cadastrar' },
 ]
 
-export function Navigation({ lista = listaMenu }) {
+export function Navigation({ lista = listaMenu}) {
 
   let iconOpen = faBars
   const [showMenu, setShowMenu] = useState(false)
@@ -32,6 +32,7 @@ export function Navigation({ lista = listaMenu }) {
             </li>
           ))
         }
+
         {user &&
           <>
             <li onClick={signOut} className="header__link">Logout</li>
@@ -39,10 +40,8 @@ export function Navigation({ lista = listaMenu }) {
             <li>{user.name}</li>
           </>
         }
-        {!user &&
 
-          <li className="header__link"><Link to="/login">Entrar</Link></li>
-        }
+        {!user && <li className="header__link"><Link to="/login">Entrar</Link></li>}
       </ul>)
   }
 
