@@ -3,6 +3,7 @@ import './styles/global.scss'
 import { AuthProvider } from "./hooks/Auth"
 import { LandingPage} from './pages/LadingPage'
 import { HTMLPage } from "./pages/HtmlPage"
+import { LoginPage } from "./pages/LoginPage"
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import { Page404 } from "./pages/Page404"
 
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path='/html'>
             <HTMLPage/>
+          </Route>
+          <Route path='/'>
+            <LoginPage/>
           </Route>
           <Route>
             <Page404/>

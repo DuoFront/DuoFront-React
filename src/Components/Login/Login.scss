@@ -1,0 +1,44 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.mainLogin {
+  max-width: 50%;
+  height: 100vh;
+  padding: 1rem 2rem;
+  color: variables.$primary-color;
+
+  @include mixins.pc {
+    height: unset;
+}
+
+@media (max-width: 850px) {
+    max-width: 100%;
+    margin-bottom: 40px;
+    height: unset;
+}
+
+&__logo {
+  padding: 1rem 0 6rem;
+  font-size: 1.5rem;
+}
+
+&__title {
+  font-size: 2.3rem;
+  padding: 0 0 4rem;
+}
+
+&__imgs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+
+  img {
+  width: 170px;
+  height: 170px;
+  }
+}
+}
+
+.btn__text {
+  padding-left: 10px;
+}
