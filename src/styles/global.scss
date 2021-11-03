@@ -14,3 +14,13 @@ body {
   background-color: variables.$bg-color ;
   overflow-x: hidden;
 }
+
+.text--purple {
+  color: variables.$second-color;
+}
+a{
+  text-decoration: none;
+}
+a:visited{
+  color: inherit;
+}

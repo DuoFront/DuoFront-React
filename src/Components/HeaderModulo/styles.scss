@@ -1,13 +1,19 @@
 @use '../../styles/mixins';
 @use '../../styles/variables';
 
-.header {
+.header2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 4rem;
   height: 90px;
-  width: 100%;
+  width: 75%;
+  position: relative;
+  left: 25%;
+  @media screen and(max-width:835px){
+    position: unset;
+    width: 100%;
+  }
 
   @include mixins.cell {
     padding: 1rem 20px;
@@ -35,35 +41,39 @@
 
   &__menu {
     background-color: variables.$bg-menu-curso;
-    width: 50vh;
-    height: 55vh; 
-    padding: 55px 40px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh; 
     position: absolute;
     right: 0;
     top: 0;
     z-index: 1;
-    border-bottom-left-radius: 10px;
-    animation: descendo 500ms linear;
-    @include mixins.animations;
+    
 
     @include mixins.cell {
-    width: 80vw;
-    height: 55vh; 
-
-    animation: descendo-mobile 500ms linear;
-    @include mixins.animations;
+    width: 60%;
+    height: 100vh;  
     }
+  }
+  &__modulo{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
   }
 
   &__link {
-    text-decoration: none;
-    display: block;
-    font-size: 1.5rem;
-    color: variables.$primary-color;
-    padding-bottom: 20px;
-    transition: all 1s;
-    cursor: pointer;
+    font-size: 20px;
+    border-bottom: 1px solid rgba( 0,0,0, 0.2);
 
+    a{
+      display: block;
+      padding: 1em;
+      color: white;
+    }
     &:hover {
       color: variables.$second-color;
     }
@@ -78,8 +88,9 @@
   @include mixins.icons;
 }
 
-.avatar {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
+.header2__ative{
+  display: none;
+  @media screen and (max-width: 835px) {
+    display: block;
+  }
 }

@@ -4,23 +4,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { useAuth } from "../../hooks/Auth"
 import { Link } from "react-router-dom"
-import '../../pages/LoginPage/index'
 
 const listaMenu = [
-  {id:1, link: 'https://www.google.com', text: 'Layouts'},
-  {id:2, link: '../../pages/LoginPage/index', text: 'Entrar'},
-  {id:3, link: 'https://www.google.com', text: 'Cadastrar'},
+  { id: 1, link: '#', text: 'Layouts' },
+  { id: 3, link: '#', text: 'Cadastrar' },
 ]
 
-export function Navigation({lista = listaMenu}){
+export function Navigation({ lista = listaMenu}) {
 
   let iconOpen = faBars
   const [showMenu, setShowMenu] = useState(false)
-  const {user, signOut, signUrl} = useAuth()
+  const { user, signOut } = useAuth()
 
   let menu
 
-  if(showMenu){
+  if (showMenu) {
     iconOpen = faTimes
     menu =  
     (<ul className={styles.header__menu}>
@@ -48,8 +46,8 @@ export function Navigation({lista = listaMenu}){
     }
   </ul>)
   }
-  
-  return(
+
+  return (
     <nav>
     <FontAwesomeIcon 
     icon={iconOpen}
