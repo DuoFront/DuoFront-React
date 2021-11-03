@@ -24,7 +24,7 @@ function App() {
           <Route path='/html'>
             <HTMLPage/>
           </Route>
-          <Route path='/'>
+          <Route path='/login'>
             <LoginPage/>
           </Route>
           <Route>
