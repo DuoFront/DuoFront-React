@@ -10,7 +10,7 @@
   width: 75%;
   position: relative;
   left: 25%;
-  @media screen and(max-width:835px){
+  @media (max-width:835px){
     position: unset;
     width: 100%;
   }
@@ -105,7 +105,7 @@
 
 .header2__ative{
   display: none;
-  @media screen and (max-width: 835px) {
+  @media (max-width: 835px) {
     display: block;
   }
 }

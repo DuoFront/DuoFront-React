@@ -13,7 +13,6 @@
     padding: 1rem 20px;
   }
 
-
   &__title {
     font-size: 1.5rem;
     color: variables.$primary-color;
@@ -34,7 +33,7 @@
   }
 
   &__menu {
-    background-color: variables.$bg-menu-curso;
+    background-color: variables.$second-color;
     width: 50vh;
     height: 55vh; 
     padding: 55px 40px;
@@ -42,34 +41,42 @@
     right: 0;
     top: 0;
     z-index: 1;
-    border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 5px;
     animation: descendo 500ms linear;
     @include mixins.animations;
 
     @include mixins.cell {
-    width: 80vw;
-    height: 55vh; 
+    width: 100vw;
+    height: 100vh; 
+    text-align: center;
+    padding-top: 100px;
 
     animation: descendo-mobile 500ms linear;
     @include mixins.animations;
     }
+
+      &__desktop {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @media (max-width: 835px) {
+          display: none;
+        }
+      }
   }
 
   &__link {
     text-decoration: none;
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: variables.$primary-color;
     padding-bottom: 20px;
     transition: all 1s;
     cursor: pointer;
-    color: white;
 
-    a{
-      color: white;
-    }
     &:hover {
-      color: variables.$second-color;
+      opacity: .7;
     }
   }
 }

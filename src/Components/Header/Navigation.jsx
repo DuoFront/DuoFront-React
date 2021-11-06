@@ -1,16 +1,11 @@
 import React, {useState} from "react"
 import styles from './Header.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faTimes, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 import { useAuth } from "../../hooks/Auth"
 import { Link } from "react-router-dom"
 
-const listaMenu = [
-  { id: 1, link: '#', text: 'Layouts' },
-  { id: 3, link: '#', text: 'Cadastrar' },
-]
-
-export function Navigation({ lista = listaMenu}) {
+export function Navigation({lista}) {
 
   let iconOpen = faBars
   const [showMenu, setShowMenu] = useState(false)
@@ -27,7 +22,8 @@ export function Navigation({ lista = listaMenu}) {
         <li key={item.id} className={styles.header__link}>
           <Link
           to={item.link}>
-            {item.text}
+             {item.icon}
+             {item.text}
             </Link>
         </li>
       ))
@@ -40,13 +36,19 @@ export function Navigation({ lista = listaMenu}) {
     </>
     }
     {!user &&
-    
-      <li className={styles.header__link}><Link to="/login">Entrar</Link></li>
+      <li className={styles.header__link}>
+        <Link to="/login">
+        <FontAwesomeIcon icon={faSignInAlt} />
+          Entrar
+        </Link>
+      </li>
     }
   </ul>)
   }
 
   return (
+    <>
+    <div className="header2__ative">
     <nav>
     <FontAwesomeIcon 
     icon={iconOpen}
@@ -54,6 +56,8 @@ export function Navigation({ lista = listaMenu}) {
     onClick={ () => (setShowMenu(!showMenu))}
     />
     { menu }
-  </nav>
+    </nav>
+    </div>
+  </>
   )
 }

@@ -46,7 +46,6 @@
     max-width: 700px;
     width: 100%;
     display: flex;
-    justify-content: end;
 
     @include mixins.pc-lg {
      height: 80vh;
