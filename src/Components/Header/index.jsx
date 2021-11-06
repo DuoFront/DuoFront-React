@@ -3,9 +3,21 @@ import styles from './Header.module.scss'
 import { Navigation } from './Navigation'
 import { Link } from 'react-router-dom'
 import { useAuth } from "../../hooks/Auth"
+import logo from '../../assets/img/Duo.png'
 
 
 const listaMenu = [
+  { id: 8, link: '#', text: <img className={styles.header__menu__logo} src={logo}/> },
+  { id: 1, link: '#', text: 'Layouts' },
+  { id: 2, link: '#', text: <h3 className={styles.header__menu__title}>Módulos</h3> },
+  { id: 3, link: '#', text: 'HTML' },
+  { id: 4, link: '#', text: 'CSS' },
+  { id: 5, link: '#', text: 'JavaScript' },
+  { id: 6, link: '#', text: <hr className={styles.header__menu__hr}/> },
+  { id: 7, link: '#', text: 'Cadastrar' },
+]
+
+const listaDesktop = [
   { id: 1, link: '#', text: 'Layouts' },
   { id: 3, link: '#', text: 'Cadastrar' },
 ]
@@ -24,7 +36,7 @@ export function Header(){
       <nav className={styles.header__desktop}>
       <ul className={styles.header__menu__desktop}>
       {
-      listaMenu.map((item) => (
+      listaDesktop.map((item) => (
         <li key={item.id} className={styles.header__link}>
           <Link
           to={item.link}>
@@ -45,6 +57,7 @@ export function Header(){
           <Link to="/login">
             Entrar
           </Link>
+
         </li>
       }
       </ul>

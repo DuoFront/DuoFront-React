@@ -30,7 +30,7 @@ export function Navigation({lista}) {
     }
     {user &&
     <>
-      <li onClick={signOut} className={styles.header__link}>Logout</li>
+      <li onClick={signOut} className={styles.header__menu__card}>Logout</li>
       <img src={user.avatar_url} alt={user.name} className={styles.avatar}/>
       <li>{user.name}</li>
     </>
@@ -38,7 +38,6 @@ export function Navigation({lista}) {
     {!user &&
       <li className={styles.header__link}>
         <Link to="/login">
-        <FontAwesomeIcon icon={faSignInAlt} />
           Entrar
         </Link>
       </li>
