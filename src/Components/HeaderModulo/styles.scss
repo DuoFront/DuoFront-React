@@ -18,13 +18,22 @@
   @include mixins.cell {
     padding: 1rem 20px;
   }
-
-
+  &__logoContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+  &__logo{
+    width: 42px;
+    height: 42px;
+  }
   &__title {
     font-size: 1.5rem;
     color: variables.$primary-color;
     transition: all 1s;
     cursor: pointer;
+    font-weight: normal;
 
     &:hover {
       color: variables.$second-color;
@@ -76,6 +85,12 @@
     }
     &:hover {
       color: variables.$second-color;
+    }
+    .ativo{
+      background-color: #3A2883;
+      &:hover{
+        background-color: purple;
+      }
     }
   }
 }

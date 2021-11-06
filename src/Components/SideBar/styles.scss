@@ -39,6 +39,16 @@
         display: block;
         padding: 1em;
         color: white;
+        &:hover{
+          background-color: #777;
+        }
       }
+      .ativo{
+        background-color: #3A2883;
+        &:hover{
+          background-color: purple;
+        }
+      }
+      
     }
 }
