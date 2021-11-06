@@ -28,7 +28,7 @@
     cursor: pointer;
     position: relative;
     z-index: 2;
-    font-size: 48px;
+    font-size: 45px;
     color: variables.$primary-color;
   }
 
@@ -142,4 +142,15 @@
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
+}
+
+.iconMenu{
+  cursor: pointer;
+    position: relative;
+    z-index: 2;
+    font-size: 48px;
+    color: variables.$primary-color;
+    position: fixed;
+    top:20px;
+    right: 40px;
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Header.module.scss'
-import { Navigation } from './Navigation'
+import { Navigation }  from './Navigation'
 import { Link } from 'react-router-dom'
 import { useAuth } from "../../hooks/Auth"
 import logo from '../../assets/img/Duo.png'
@@ -49,7 +49,6 @@ export function Header(){
         <li onClick={signOut} className={styles.header__menu__card__desk}>
         <li  className={styles.header__link}>
           <img src={user.avatar_url} alt={user.name} className={styles.avatar}/>
-          {user.name}
         </li>
         </li>
       </>

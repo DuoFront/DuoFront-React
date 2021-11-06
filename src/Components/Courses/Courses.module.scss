@@ -2,7 +2,7 @@
 @use '../../styles/mixins';
 
 .courses {
-  margin: 0 70px 70px;
+  padding: 0 70px 70px;
 
   @include mixins.cell {
     margin: 70px 20px ;

@@ -7,16 +7,21 @@ import { Link } from "react-router-dom"
 
 export function Navigation({lista}) {
 
-  let iconOpen = faBars
+  let iconOpen = true
   const [showMenu, setShowMenu] = useState(false)
   const { user, signOut, signUrl } = useAuth()
 
   let menu
 
   if (showMenu) {
-    iconOpen = faTimes
+    iconOpen = null
     menu =  
     (<ul className={styles.header__menu}>
+      <FontAwesomeIcon 
+    icon={faTimes}
+    className={styles.iconMenu} //posiciona com position fixed aki 
+    onClick={ () => (setShowMenu(!showMenu))}
+    />
     {
       lista.map((item) => (
         <li key={item.id} className={styles.header__link}>
@@ -56,11 +61,15 @@ export function Navigation({lista}) {
     <>
     <div className="header2__ative">
     <nav>
-    <FontAwesomeIcon 
-    icon={iconOpen}
+      {
+        iconOpen &&
+        <FontAwesomeIcon 
+    icon={faBars}
     className={styles.header__icon}
     onClick={ () => (setShowMenu(!showMenu))}
     />
+      }
+    
     { menu }
     </nav>
     </div>
