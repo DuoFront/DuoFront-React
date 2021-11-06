@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import styles from './Header.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faTimes, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 import { useAuth } from "../../hooks/Auth"
 import { Link } from "react-router-dom"
 
@@ -30,9 +30,16 @@ export function Navigation({lista}) {
     }
     {user &&
     <>
-      <li onClick={signOut} className={styles.header__menu__card}>Logout</li>
-      <img src={user.avatar_url} alt={user.name} className={styles.avatar}/>
-      <li>{user.name}</li>
+      <li className={styles.header__menu__card}>
+      <li className={styles.header__menu__card__img}>
+        <img src={user.avatar_url} alt={user.name} className={styles.avatar}/>
+        {user.name}
+      </li>
+      <span className={styles.header__menu__card__btn} onClick={signOut} >
+        <FontAwesomeIcon icon={faSignOutAlt}/>
+        Sair
+      </span>
+      </li>
     </>
     }
     {!user &&

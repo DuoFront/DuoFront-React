@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 import { useAuth } from "../../hooks/Auth"
 import logo from '../../assets/img/Duo.png'
 
-
 const listaMenu = [
   { id: 8, link: '#', text: <img className={styles.header__menu__logo} src={logo}/> },
   { id: 1, link: '#', text: 'Layouts' },
@@ -47,9 +46,12 @@ export function Header(){
       }
       {user &&
       <>
-        <li onClick={signOut} className={styles.header__link}>Logout</li>
-        <img src={user.avatar_url} alt={user.name} className={styles.avatar}/>
-        <li>{user.name}</li>
+        <li onClick={signOut} className={styles.header__menu__card__desk}>
+        <li  className={styles.header__link}>
+          <img src={user.avatar_url} alt={user.name} className={styles.avatar}/>
+          {user.name}
+        </li>
+        </li>
       </>
       }
       {!user &&
