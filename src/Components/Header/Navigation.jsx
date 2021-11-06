@@ -41,7 +41,7 @@ export function Navigation({ lista = listaMenu}) {
     }
     {!user &&
     
-      <li className={styles.header__link}><a href={signUrl}>Entrar</a></li>
+      <li className={styles.header__link}><Link to="/login">Entrar</Link></li>
     }
   </ul>)
   }
