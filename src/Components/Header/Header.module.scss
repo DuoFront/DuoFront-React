@@ -119,6 +119,9 @@
     padding-bottom: 20px;
     transition: all 1s;
     cursor: pointer;
+    a{
+      color: white;
+    }
 
     @media (max-width: 835px) {
       font-size: 1.5rem;
