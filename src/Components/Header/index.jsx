@@ -6,14 +6,14 @@ import { useAuth } from "../../hooks/Auth"
 import logo from '../../assets/img/Duo.png'
 
 const listaMenu = [
-  { id: 8, link: '#', text: <img className={styles.header__menu__logo} src={logo}/> },
-  { id: 1, link: '#', text: 'Layouts' },
-  { id: 2, link: '#', text: <h3 className={styles.header__menu__title}>Módulos</h3> },
-  { id: 3, link: '#', text: 'HTML' },
-  { id: 4, link: '#', text: 'CSS' },
-  { id: 5, link: '#', text: 'JavaScript' },
+  { id: 8, link: '/', text: <img className={styles.header__menu__logo} src={logo}/> },
+  { id: 1, link: '/layouts', text: 'Layouts' },
+  { id: 2, link: '/', text: <h3 className={styles.header__menu__title}>Módulos</h3> },
+  { id: 3, link: '/html/aula1', text: 'HTML' },
+  { id: 4, link: '/css', text: 'CSS' },
+  { id: 5, link: '/javascript', text: 'JavaScript' },
   { id: 6, link: '#', text: <hr className={styles.header__menu__hr}/> },
-  { id: 7, link: '#', text: 'Cadastrar' },
+  { id: 7, link: '/login', text: 'Cadastrar' },
 ]
 
 const listaDesktop = [

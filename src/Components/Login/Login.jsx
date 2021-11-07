@@ -16,7 +16,7 @@ export function Login() {
           Pronto para iniciar sua jornada?
       </h2>
       <ButtonDefault>
-        <a href={signUrl}>
+        <a href={signUrl} className={styles.mainLogin__link}>
       <ion-icon name="logo-github"></ion-icon>
           <span className={styles.btn_text}>Entrar com github</span>
         </a>

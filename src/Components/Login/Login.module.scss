@@ -16,7 +16,11 @@
     margin-bottom: 40px;
     height: unset;
 }
-
+&__link{
+  display: flex;
+  align-items: center;
+  color: white;
+}
 &__logo {
   padding: 1rem 0 6rem;
   font-size: 1.5rem;
@@ -41,4 +45,5 @@
 
 .btn__text {
   padding-left: 10px;
+  color: white;
 }

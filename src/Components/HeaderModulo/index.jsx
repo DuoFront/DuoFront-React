@@ -14,10 +14,16 @@ export function HeaderModulo({lista, modulo}){
   let menu
 
   if (showMenu) {
-    iconOpen = faTimes
+    iconOpen = null
     menu =
-      (      
+      (     
+         
       <ul className="header2__menu">
+        <FontAwesomeIcon
+        icon={faTimes}
+        className="header2__iconMenu"
+        onClick={() => (setShowMenu(!showMenu))}
+      />
         <li className="header2__modulo">
           <h1>{modulo}</h1>
         </li>
@@ -51,11 +57,15 @@ export function HeaderModulo({lista, modulo}){
       </div>
       <div className="header2__ative">
       <nav>
-      <FontAwesomeIcon
-        icon={iconOpen}
+        {
+          iconOpen &&
+          <FontAwesomeIcon
+        icon={faBars}
         className="header2__icon"
         onClick={() => (setShowMenu(!showMenu))}
       />
+        }
+      
       {menu}
 
       </nav>

@@ -9,6 +9,7 @@
     max-width: 100%;
     left: 0;
     position: unset;
+    
   }
 
   h1{
@@ -31,6 +32,9 @@
   }
   section {
     padding: 0 2.8em;
+    @media screen and( max-width: 835px){
+      padding: 0 1em;
+    }
     a{
       color: white;
       text-decoration: none;
