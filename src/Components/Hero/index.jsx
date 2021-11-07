@@ -14,6 +14,7 @@ export function Hero(){
         <article className={styles.hero__card}>
           <img className={styles.hero__img} src={ logo }/>
         </article>
+        <div className={styles.baloon}></div>
       </section>
   )
 }

@@ -13,7 +13,6 @@
     padding: 1rem 20px;
   }
 
-
   &__title {
     font-size: 1.5rem;
     color: variables.$primary-color;
@@ -29,47 +28,104 @@
     cursor: pointer;
     position: relative;
     z-index: 2;
-    font-size: 48px;
+    font-size: 45px;
     color: variables.$primary-color;
   }
 
   &__menu {
-    background-color: variables.$bg-menu-curso;
-    width: 50vh;
-    height: 55vh; 
-    padding: 55px 40px;
-    position: absolute;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0,0.9);
+    position: fixed;
     right: 0;
     top: 0;
     z-index: 1;
-    border-bottom-left-radius: 10px;
-    animation: descendo 500ms linear;
-    @include mixins.animations;
-
-    @include mixins.cell {
-    width: 80vw;
-    height: 55vh; 
-
+    border-bottom-left-radius: 5px;
     animation: descendo-mobile 500ms linear;
     @include mixins.animations;
+    width: 100vw;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    gap: 10px;
+    
+      &__desktop {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @media (max-width: 835px) {
+          display: none;
+        }
+      }
+
+      &__logo {
+        max-width: 100px;
+      }
+
+      &__card {
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        color: variables.$primary-color;
+        // background-color: #5840ba6b ;
+        // padding: 1rem 2rem;
+        border-radius: 10px;
+
+        &__img{
+          display: flex;
+          align-items: center;
+          gap:10px;
+        }
+
+        &__btn {
+          display: flex;
+          gap: 10px;
+          padding: .4rem;
+          justify-content: center;
+          border-radius: 10px;
+          background-color: #5840ba6b ;
+        }
+
+        &__desk {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background-color: transparent ;
+        }
+      }
+
+      &__hr {
+        background-color: #5840ba6b ;
+        height: 3px;
+        width: 200px;
+      }
+
+      &__title {
+        background-color: #5840ba6b;
+        display: inline-block;
+        padding: .3rem 1rem;
+        border-radius: 10px;
+      }
     }
-  }
 
   &__link {
     text-decoration: none;
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: variables.$primary-color;
     padding-bottom: 20px;
     transition: all 1s;
     cursor: pointer;
-    color: white;
 
-    a{
-      color: white;
+    @media (max-width: 835px) {
+      font-size: 1.5rem;
     }
+
     &:hover {
-      color: variables.$second-color;
+      opacity: .7;
     }
   }
 }
@@ -86,4 +142,15 @@
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
+}
+
+.iconMenu{
+  cursor: pointer;
+    position: relative;
+    z-index: 2;
+    font-size: 48px;
+    color: variables.$primary-color;
+    position: fixed;
+    top:20px;
+    right: 40px;
 }

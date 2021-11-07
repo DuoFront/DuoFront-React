@@ -5,7 +5,10 @@ export const AuthContext = createContext({})
 
 function AuthProvider({children}){
 
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(      
+  {name: 'Paola',
+  avatar_url: 'https:/github.com/paolaguedes.png'}
+  );
 
   const signUrl = `https://github.com/login/oauth/authorize?scope=user&client_id=52b1114afd0fcfd479e7`
 
