@@ -6,6 +6,7 @@ import { HTMLPage } from "./pages/HtmlPage"
 import { LoginPage } from "./pages/LoginPage"
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import { Page404 } from "./pages/Page404"
+import { LayoutsPage } from './pages/LayoutsPage'
 
 function App() {
   
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path='/login'>
             <LoginPage/>
+          </Route>
+          <Route path='/layouts'>
+            <LayoutsPage/>
           </Route>
           <Route>
             <Page404/>

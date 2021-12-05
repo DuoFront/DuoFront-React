@@ -1,0 +1,86 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.card {
+  @include mixins.cardLayout;
+  display: flex;
+
+  @include mixins.cell {
+      flex-direction: column;
+      max-width: 30em;
+      height: 30em;
+  }
+  img{
+      width: 45%;
+      object-fit: cover;
+      border-radius: 10px 0 0 10px;
+      @include mixins.cell {
+          width: unset;
+      }
+  }
+  img {
+      @include mixins.cell {
+         max-width: 30em;
+         height: 60%;
+         object-fit: cover;
+         border-top-left-radius: 10px;
+         border-top-right-radius: 10px;
+      }
+  }
+
+  .card__text {
+      text-align: start;
+      padding-left: 1em;
+
+      @include mixins.cell {
+          text-align: center;
+          padding-left: 0;
+      }
+
+      &__title {
+          color: variables.$second-color;
+          font-weight: 500;
+          font-size: 1.8em;
+      }
+
+      &__level {
+          font-size: 30px;
+      }
+
+      &__level[class~="easy"] {
+          color: variables.$easy;
+      }
+
+      &__level[class~="intermediary"] {
+          color: variables.$intermediary;
+      }
+
+      &__level[class~="hard"] {
+          color: variables.$hard;
+      }
+      
+      &__code {
+          color: variables.$second-color;
+          font-size: 25px;
+      }
+
+      &__btn {
+          display: inline-block;
+          margin: 10px;
+          background-color: variables.$second-color;
+          padding: .1em 2em;
+          border-radius: 10px;
+          transition: all .4s;
+          font-size: 1.2em;
+          color: white;
+          &:hover {
+              background-color: #544881;
+          }
+
+          @include mixins.cell {
+              padding: .8em 4em;
+          }
+      }
+  }
+
+}
